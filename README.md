@@ -6,6 +6,8 @@ There should be one GitHub repository per team.
 
 **Ensure all team members have completed all steps in the [set up](setup.md) document.**
 
+**Instrucciones en Español [aqui](setup-espanol.md)**
+
 ## Theme of your project
 
 1. Extract Transform Load (ETL) pipeline with an analytics component
