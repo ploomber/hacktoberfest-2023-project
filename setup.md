@@ -182,14 +182,6 @@ pip install poetry
 poetry install
 ```
 
-## 🐳 Setting up Docker Desktop and Compose
-
-<details>
-  <summary>Windows</summary>
-
-
-
-
 ## 🔑 Setting Up Keys and Tokens
 
 
@@ -239,6 +231,13 @@ After logging in, press `y` to add the token to credentials for git.
 
 
 ## <img src="https://octodex.github.com/images/original.png" width=40px/> Let's Make Sure That GitHub is Ready to Roll!
+
+## 🐳 Setting up Docker Desktop and Compose
+
+<details>
+  <summary>Windows</summary>
+
+
 
 **👉 [💿 Download Docker](https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe)** 👈
 
@@ -357,8 +356,6 @@ To install Docker Desktop successfully, you must:
    - **Use advanced settings**. You can then set the location of the Docker CLI tools either in the system or user directory, enable the default Docker socket, and enable privileged port mapping. See [Settings](../settings/mac.md#advanced), for more information and how to set the location of the Docker CLI tools.
 6. Select **Finish**. If you have applied any of the above configurations that require a password in step 5, enter your password to confirm your choice.
 </details>
-
-
 
 
 
