@@ -6,7 +6,7 @@ There should be one GitHub repository per team. /  Debería haber un repositorio
 
 **Ensure all team members have completed all steps in the [set up](setup.md) document.**
 
-**Instrucciones en Español [aqui](setup-espanol.md)**
+**Asegúrate de que todos los miembros del equipo hayan completado todos los pasos en el [documento de configuración](setup.md).**
 
 ## Theme of your project / Tema de tu proyecto
 
