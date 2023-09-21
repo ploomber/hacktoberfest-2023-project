@@ -2,39 +2,11 @@
 
 ## :hammer_and_wrench: Tools We'll Be Using
 We will be using a few tools such as `git`, `conda`, and `pip`.
-<details>
-<summary>Git</summary>
-
-Git is a free and open source distributed version control system designed to handle everything from small to very large projects. These are the commands we will be using with `git`:
-
-`git clone` -> clone a remote repository to your local computer
-
-`git add` -> add files to a commit
-
-`git commit -m {message}` -> commit changes with a message
-
-`git push` -> push commit to remote repository
-</details>
-
-<details>
-<summary>Conda & Pip</summary>
-
-Conda is an open-source, cross-platform, language-agnostic package manager and environment management system. We will use `pip` within `conda` environments to manage our package installations. `pip` is Python's package management system. `conda` comes with Anaconda. And Anaconda is a convenient way to set up your Python programming environment since it comes with an environment management tool (`conda`) and comes with extra packages that are commonly used in data science and ML.
-
-Some commands we will use in this lesson when it comes to `conda` and `pip`:
-
-`conda create --name hacktoberfest-env python=3.10` -> This creates a virtual environment. A virtual environment is a Python environment such that the Python interpreter, libraries, and scripts installed into it are isolated from those installed on other environments and any libraries installed on the system. So basically, this allows you to keep all your project's code/dependencies/libraries separated from other projects. You are specifically saying to create said environment with the name `hacktoberfest-env`, use `python` version 3.8, and use `pip` as your package manager. The command `conda` invokes the underlying logic to actually make the virtual environment and manages said environments for you.
-
-`conda activate hacktoberfest-env` -> This activates the virtual environment you made with the above command for your current terminal session.
-
-`pip install numpy pandas matplotlib jupyter openai huggingface_hub` -> This installs the six packages mentioned - `numpy`, `pandas`, `jupyter`, `matplotlib`, and `openai`. `numpy` is used for scientific computing, `pandas` is used for data analysis, `matplotlib` is used for data graphics. `jupyter` is discussed later in this tutorial in depth! `openai` is used to access OpenAI's GPT models through an API key. `huggingface_hub` is used to push our code and models to Huggingface and host it in a Huggingface Space. `pip` is the Python package manager and you are telling it to `install` the listed packages to your environment.
-
-</details>
 
 <p></p>
 
 ## :rocket: Software to install
-Let's start off by setting up our environment!  Review the environment setup instructions for the local environment that you'll be using in this course.
+Review the environment setup instructions for the local environment that you'll be using in this course.
 
 <details>
 <summary> Install GitHub Desktop</summary>
@@ -43,8 +15,51 @@ Source: https://desktop.github.com/
 
 Click the `Download for {OS}` button.
 
+<details>
+  <summary>Github SSH Setup (if you are using Git from the terminal)</summary>
+  Secure Shell Protocol (SSH) provides a secure communication channel of an unsecured network.  Let's set it up!
+  
+  <p></p>
+
+  1. Generate a Private/Public SSH Key Pair.
+    
+  ```console
+  ssh-keygen -o -t rsa -C "your email address for github"
+  ```
+
+  2. Save file pair.  Default location `~/.ssh/id_rsa` is fine! 
+  
+
+  3. At the prompt, type in a secure passphrase.
+  4. Copy the contents of the public key that we will share with GitHub. 
+
+     * Mac: `pbcopy < ~/.ssh/id_rsa.pub` 
+
+     * Windows (WSL): `clip.exe < ~/.ssh/id_rsa.pub`
+
+     * Linux: `xclip -sel c < ~/.ssh/id_rsa.pub`
+  
+  5. Go to your GitHub account and go to `Settings`. 
+  
+  6. Under `Access`, click on the `SSH and GPG keys` tab on the left.
+
+  ![image](https://github.com/AI-Maker-Space/LLMOps-Dev-101/assets/37101144/5fb54f16-7279-49c4-bda3-2da36cbbc306)
+
+
+  7. Click on the `New SSH Key` button.
+  
+  ![image](https://github.com/AI-Maker-Space/LLMOps-Dev-101/assets/37101144/d5551c28-9d70-438c-b45d-43698384e3ff)
+
+  
+  8. Name the key, and paste the public key that you copied. Click the `Add SSH Key` button
+  
+
+  ![image](https://github.com/AI-Maker-Space/LLMOps-Dev-101/assets/37101144/8f7c4496-0e88-4058-9baf-73495322db8b)
+
 
 </details>
+
+
 
 <details>
   <summary>Install miniconda</summary>
@@ -105,6 +120,30 @@ Pick the distribution that makes sense for your OS.
 
 <p> </p>
 
+## Creating a local copy of the repository
+
+**Each team will decide who will be the owner of the repository. The owner will create a copy of the repository and share access with the team members.**
+
+1. Press on the `Use this template` button on the top right of the repository.
+2. Select "Create a new repository" and populate the fields 
+
+![](./images/template-copy.png)
+
+3. The owner of the repository will share the repository with the team members by collecting their GitHub IDs and adding them as collaborators.
+
+![](./images/collaborators.png)
+
+4. Each team member will clone the repository to their local machine. You can use GitHub Desktop or the command line to clone the repository. To use GitHub Desktop, click on the `Code` button and select `Open with GitHub Desktop`. To use the command line, copy the SSH link and run the following command in your terminal.
+
+```bash
+git clone <SSH link>
+```
+
+
+
+## Setting up a virtual environment
+
+Once you have installed all software required
 
 ## 🐳 Setting up Docker Desktop and Compose
 
@@ -284,49 +323,7 @@ After logging in, press `y` to add the token to credentials for git.
 
 ## <img src="https://octodex.github.com/images/original.png" width=40px/> Let's Make Sure That GitHub is Ready to Roll!
 
-<details>
-  <summary>Github SSH Setup</summary>
-  Secure Shell Protocol (SSH) provides a secure communication channel of an unsecured network.  Let's set it up!
-  
-  <p></p>
 
-  1. Generate a Private/Public SSH Key Pair.
-    
-  ```console
-  ssh-keygen -o -t rsa -C "your email address for github"
-  ```
-
-  2. Save file pair.  Default location `~/.ssh/id_rsa` is fine! 
-  
-
-  3. At the prompt, type in a secure passphrase.
-  4. Copy the contents of the public key that we will share with GitHub. 
-
-     * Mac: `pbcopy < ~/.ssh/id_rsa.pub` 
-
-     * Windows (WSL): `clip.exe < ~/.ssh/id_rsa.pub`
-
-     * Linux: `xclip -sel c < ~/.ssh/id_rsa.pub`
-  
-  5. Go to your GitHub account and go to `Settings`. 
-  
-  6. Under `Access`, click on the `SSH and GPG keys` tab on the left.
-
-  ![image](https://github.com/AI-Maker-Space/LLMOps-Dev-101/assets/37101144/5fb54f16-7279-49c4-bda3-2da36cbbc306)
-
-
-  7. Click on the `New SSH Key` button.
-  
-  ![image](https://github.com/AI-Maker-Space/LLMOps-Dev-101/assets/37101144/d5551c28-9d70-438c-b45d-43698384e3ff)
-
-  
-  8. Name the key, and paste the public key that you copied. Click the `Add SSH Key` button
-  
-
-  ![image](https://github.com/AI-Maker-Space/LLMOps-Dev-101/assets/37101144/8f7c4496-0e88-4058-9baf-73495322db8b)
-
-
-</details>
 
 
 
