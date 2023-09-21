@@ -23,9 +23,9 @@ Proporcione una descripción de su proyecto. Incluya las fuentes de datos que es
 
 ## Data sources / Fuentes de datos
 
-Describe a description of your data sources. Please ensure you work only with open source data. Include a link to the data you are working with. 
+Provide a detailed description of your data sources. Please ensure you work only with open source data. Include a link to the data you are working with. 
 
-Describa una descripción de sus fuentes de datos. Asegúrese de trabajar solo con datos de código abierto. Incluya un enlace a los datos con los que está trabajando.
+Agregue una descripción detallada de sus fuentes de datos. Asegúrese de trabajar solo con datos de código abierto. Incluya un enlace a los datos con los que está trabajando.
 
 **Do not upload data to GitHub** / **No suba datos a GitHub**
 
