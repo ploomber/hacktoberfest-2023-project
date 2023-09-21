@@ -1,8 +1,8 @@
 # Hacktoberfest 2023 project: building ETL and RAG pipelines with open source 
 
-## Set up
+## Set up /  Configuración
 
-There should be one GitHub repository per team. 
+There should be one GitHub repository per team. / There should be one GitHub repository per team. / Debería haber un repositorio de GitHub por equipo.
 
 **Ensure all team members have completed all steps in the [set up](setup.md) document.**
 
