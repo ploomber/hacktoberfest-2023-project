@@ -1,1 +1,336 @@
-# hacktoberfest-2023-project
+# hacktoberfest 2023 project template
+
+## :hammer_and_wrench: Tools We'll Be Using
+We will be using a few tools such as `git`, `conda`, and `pip`.
+<details>
+<summary>Git</summary>
+
+Git is a free and open source distributed version control system designed to handle everything from small to very large projects. These are the commands we will be using with `git`:
+
+`git clone` -> clone a remote repository to your local computer
+
+`git add` -> add files to a commit
+
+`git commit -m {message}` -> commit changes with a message
+
+`git push` -> push commit to remote repository
+</details>
+
+<details>
+<summary>Conda & Pip</summary>
+
+Conda is an open-source, cross-platform, language-agnostic package manager and environment management system. We will use `pip` within `conda` environments to manage our package installations. `pip` is Python's package management system. `conda` comes with Anaconda. And Anaconda is a convenient way to set up your Python programming environment since it comes with an environment management tool (`conda`) and comes with extra packages that are commonly used in data science and ML.
+
+Some commands we will use in this lesson when it comes to `conda` and `pip`:
+
+`conda create --name hacktoberfest-env python=3.10` -> This creates a virtual environment. A virtual environment is a Python environment such that the Python interpreter, libraries, and scripts installed into it are isolated from those installed on other environments and any libraries installed on the system. So basically, this allows you to keep all your project's code/dependencies/libraries separated from other projects. You are specifically saying to create said environment with the name `hacktoberfest-env`, use `python` version 3.8, and use `pip` as your package manager. The command `conda` invokes the underlying logic to actually make the virtual environment and manages said environments for you.
+
+`conda activate hacktoberfest-env` -> This activates the virtual environment you made with the above command for your current terminal session.
+
+`pip install numpy pandas matplotlib jupyter openai huggingface_hub` -> This installs the six packages mentioned - `numpy`, `pandas`, `jupyter`, `matplotlib`, and `openai`. `numpy` is used for scientific computing, `pandas` is used for data analysis, `matplotlib` is used for data graphics. `jupyter` is discussed later in this tutorial in depth! `openai` is used to access OpenAI's GPT models through an API key. `huggingface_hub` is used to push our code and models to Huggingface and host it in a Huggingface Space. `pip` is the Python package manager and you are telling it to `install` the listed packages to your environment.
+
+</details>
+
+<p></p>
+
+## :rocket: Software to install
+Let's start off by setting up our environment!  Review the environment setup instructions for the local environment that you'll be using in this course.
+
+<details>
+<summary> Install GitHub Desktop</summary>
+
+Source: https://desktop.github.com/
+
+Click the `Download for {OS}` button.
+
+
+</details>
+
+<details>
+  <summary>Install miniconda</summary>
+
+Source: https://docs.conda.io/projects/miniconda/en/latest/#id2
+
+Pick the distribution that makes sense for your OS.
+
+![](./images/miniconda.png)
+
+</details>
+
+
+<details>
+  <summary>Install and set up VSCode</summary>
+
+Source: https://code.visualstudio.com/docs/setup/setup-overview
+
+Pick the distribution that makes sense for your OS.
+
+
+  <summary>Install the Python and Jupyter Notebook Extensions</summary>
+
+  1. Click the `Extensions` <img src="https://github.com/AI-Maker-Space/LLMOps-Dev-101/assets/37101144/f17d8f45-f174-4b9b-be92-8f1e85d8a77b" width=30px/> tab on the left side of the window.
+
+  2. Type "Python" in the search bar.
+
+  3. Click `Install` <img src="https://github.com/AI-Maker-Space/LLMOps-Dev-101/assets/37101144/4c06f2a7-d7c3-4c59-b656-82170518cbeb" width=30px/>  on both the <ins><strong>Python Extension</strong></ins> and on the <ins><strong>Microsoft Jupyter Notebook Extension</strong></ins>
+
+
+  <summary>Set the Python Interpreter</summary>
+
+  1. Open VS Code and click on `New File...`
+
+  2. Open the Command Pallette 
+    <strong>(Mac: </strong></ins> <kbd>Shift</kbd><kbd>⌘</kbd>+<kbd>P</kbd> 
+    ,<strong> Windows: </strong></ins> <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>)
+
+  3. Type "Python" in the search bar.
+
+  4. Click on `New Python File`
+
+  5. Open the Command Pallette again.  Can you remember the shortcut?  If    not, see #2 above again.
+
+  6. Type "Python Interpreter".
+
+  7. Click on `Python: Select Interpreter`
+
+  8. Select the `Conda` environment that you installed earlier. 
+  
+  <p align = "center" draggable=”false”>
+  <img src="https://github.com/AI-Maker-Space/LLMOps-Dev-101/assets/37101144/d95ff119-2c97-4bf8-9133-1bf167f61f6e"> 
+  </p>
+
+  9. Now you're ready to start coding!
+
+</details>
+
+<p> </p>
+
+
+## 🐳 Setting up Docker Desktop and Compose
+
+<details>
+  <summary>Windows</summary>
+
+
+
+**👉 [💿 Download Docker](https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe)** 👈
+
+1. Double-click **Docker Desktop Installer.exe** to run the installer.
+
+2. When prompted, ensure the **Use WSL 2 instead of Hyper-V** option on the Configuration page is selected or not depending on your choice of backend.
+
+   If your system only supports one of the two options, you will not be able to select which backend to use.
+
+3. Follow the instructions on the installation wizard to authorize the installer and proceed with the install.
+
+4. When the installation is successful, select **Close** to complete the installation process.
+
+5. If your admin account is different to your user account, you must add the user to the **docker-users** group. Run **Computer Management** as an **administrator** and navigate to **Local Users and Groups** > **Groups** > **docker-users**. Right-click to add the user to the group.
+   Sign out and sign back in for the changes to take effect.
+   
+</details>
+
+
+
+<details>
+  <summary>Ubuntu</summary>
+
+To install Docker Desktop successfully, you must:
+
+- Meet the [system requirements](https://docs.docker.com/engine/install/ubuntu/#prerequisites)
+- Have a 64-bit version of either Ubuntu Jammy Jellyfish 22.04 (LTS) or Ubuntu Impish Indri 21.10.
+  Docker Desktop is supported on `x86_64` (or `amd64`) architecture.
+- For non-Gnome Desktop environments, `gnome-terminal` must be installed:
+  ```console
+  $ sudo apt install gnome-terminal
+  ```
+
+1.  Update the `apt` package index and install packages to allow `apt` to use a
+    repository over HTTPS:
+
+    ```console
+    $ sudo apt-get update
+    $ sudo apt-get install ca-certificates curl gnupg
+    ```
+
+2.  Add Docker's official GPG key:
+
+    ```console
+    $ sudo install -m 0755 -d /etc/apt/keyrings
+    $ curl -fsSL {{% param "download-url-base" %}}/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+    $ sudo chmod a+r /etc/apt/keyrings/docker.gpg
+    ```
+
+3.  Use the following command to set up the repository:
+
+    ```console
+    $ echo \
+      "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] {{% param "download-url-base" %}} \
+      "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
+      sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+    ```
+
+4. Update the `apt` package index:
+
+   ```console
+   $ sudo apt-get update
+   ```
+
+
+5. Download Docker Desktop
+   
+     ``` bash
+     wget https://desktop.docker.com/linux/main/amd64/docker-desktop-4.22.1-amd64.deb
+     ```
+
+6. Install the package with apt as follows:
+     ```bash
+     $ sudo apt-get update
+     $ sudo apt-get install ./docker-desktop-4.22.1-amd64.deb
+     ```
+     
+7. Launch Docker Desktop
+     ```bash
+          systemctl --user start docker-desktop
+     ```
+     
+   > **Note**
+   >
+   > At the end of the installation process, `apt` displays an error due to installing a downloaded package. You
+   > can ignore this error message.
+   >
+   > ```
+   > N: Download is performed unsandboxed as root, as file '/home/user/Downloads/docker-desktop.deb' couldn't be accessed by user '_apt'. - pkgAcquire::Run (13: Permission denied)
+</details>
+
+
+
+<details>
+  <summary>macOS (Intel and Apple Silicon)</summary>
+
+**👉 [💿 Download Docker](https://desktop.docker.com/mac/main/arm64/Docker.dmg)** 👈
+
+1. Double-click `Docker.dmg` to open the installer, then drag the Docker icon to
+    the **Applications** folder.
+
+
+2. Double-click `Docker.app` in the **Applications** folder to start Docker.
+
+3. The Docker menu ({{< inline-image src="images/whale-x.svg" alt="whale menu" >}}) displays the Docker Subscription Service Agreement.
+
+    {{< include "desktop-license-update.md" >}}
+
+4. Select **Accept** to continue. 
+
+   Note that Docker Desktop won't run if you do not agree to the terms. You can choose to accept the terms at a later date by opening Docker Desktop.
+
+   For more information, see [Docker Desktop Subscription Service Agreement](https://www.docker.com/legal/docker-subscription-service-agreement). We recommend that you also read the [FAQs](https://www.docker.com/pricing/faq).
+5. From the installation window, select either: 
+   - **Use recommended settings (Requires password)**. This let's Docker Desktop automatically set the necessary configuration settings. 
+   - **Use advanced settings**. You can then set the location of the Docker CLI tools either in the system or user directory, enable the default Docker socket, and enable privileged port mapping. See [Settings](../settings/mac.md#advanced), for more information and how to set the location of the Docker CLI tools.
+6. Select **Finish**. If you have applied any of the above configurations that require a password in step 5, enter your password to confirm your choice.
+</details>
+
+
+
+
+## 🔑 Setting Up Keys and Tokens
+
+
+<details>
+  <summary>Generating an OpenAI API key</summary>
+     
+**Create an account with OpenAI [here](https://platform.openai.com/signup) if you do not have one.**
+
+Navigate to [OpenAI's API Developer settings](https://platform.openai.com/account/api-keys) and click on `+ Create new secrete key`.
+![image](https://github.com/AI-Maker-Space/LLMOps-Dev-101/assets/37101144/b6179d51-76ac-42a8-8304-39f8b5c9a8c8)
+
+Name your key and click `Create secret key`
+![image](https://github.com/AI-Maker-Space/LLMOps-Dev-101/assets/37101144/be0ea05f-59d3-4d20-939d-b402e3d4bbb2)
+
+Copy the key and save it for later use. We will use this key several times in deploying projects. Please do not lose this key or you will need to generate a new one
+
+![image](https://github.com/AI-Maker-Space/LLMOps-Dev-101/assets/37101144/cfaec5fa-5380-4aca-a6ae-6c14c8db6789)
+
+We recommend your run through our [OpenAI Notebook](https://colab.research.google.com/drive/16Y67VozkGVErtrF3WQArpM52AOk5pBGu?usp=sharing#scrollTo=3qCKaH6vD-jZ) to learn how to utilize the OpenAI API.
+</details>
+
+<details>
+  <summary>Generating a Huggingface Access Token</summary>
+     
+**Create an account with Huggingface [here](https://huggingface.co/join) if you do not have one.**
+
+Navigate to [Token settings](https://huggingface.co/settings/tokens) and click on `New token`.
+![Screenshot 2023-08-29 at 6 16 12 PM](https://github.com/AI-Maker-Space/LLMOps-Dev-101/assets/37101144/8ec271de-4cb2-44b0-b6f8-ea354e2c42c2)
+
+Name your access token, change the role to write, and click `Generate a token`
+![Screenshot 2023-08-29 at 6 16 58 PM](https://github.com/AI-Maker-Space/LLMOps-Dev-101/assets/37101144/b9ae1590-1541-497d-a54a-1188438844b8)
+
+Copy the token and save it for later use. We will use this token several times in deploying projects. If you lose this token, you can always go back to your token's page and view the token.
+
+![Screenshot 2023-08-29 at 6 17 29 PM](https://github.com/AI-Maker-Space/LLMOps-Dev-101/assets/37101144/5fa285fa-d2ef-4308-b713-fb7384a53516)
+
+Login to Huggingface using your terminal
+``` bash
+huggingface-cli login
+```
+![Screenshot 2023-08-29 at 6 13 23 PM](https://github.com/AI-Maker-Space/LLMOps-Dev-101/assets/37101144/31727145-8451-48bd-a560-9d92a8d4af3a)
+
+After logging in, press `y` to add the token to credentials for git.
+![Screenshot 2023-08-29 at 6 18 13 PM](https://github.com/AI-Maker-Space/LLMOps-Dev-101/assets/37101144/5215d7eb-7a40-4e50-acf1-a5b7c5186a54)
+
+</details>
+
+
+## <img src="https://octodex.github.com/images/original.png" width=40px/> Let's Make Sure That GitHub is Ready to Roll!
+
+<details>
+  <summary>Github SSH Setup</summary>
+  Secure Shell Protocol (SSH) provides a secure communication channel of an unsecured network.  Let's set it up!
+  
+  <p></p>
+
+  1. Generate a Private/Public SSH Key Pair.
+    
+  ```console
+  ssh-keygen -o -t rsa -C "your email address for github"
+  ```
+
+  2. Save file pair.  Default location `~/.ssh/id_rsa` is fine! 
+  
+
+  3. At the prompt, type in a secure passphrase.
+  4. Copy the contents of the public key that we will share with GitHub. 
+
+     * Mac: `pbcopy < ~/.ssh/id_rsa.pub` 
+
+     * Windows (WSL): `clip.exe < ~/.ssh/id_rsa.pub`
+
+     * Linux: `xclip -sel c < ~/.ssh/id_rsa.pub`
+  
+  5. Go to your GitHub account and go to `Settings`. 
+  
+  6. Under `Access`, click on the `SSH and GPG keys` tab on the left.
+
+  ![image](https://github.com/AI-Maker-Space/LLMOps-Dev-101/assets/37101144/5fb54f16-7279-49c4-bda3-2da36cbbc306)
+
+
+  7. Click on the `New SSH Key` button.
+  
+  ![image](https://github.com/AI-Maker-Space/LLMOps-Dev-101/assets/37101144/d5551c28-9d70-438c-b45d-43698384e3ff)
+
+  
+  8. Name the key, and paste the public key that you copied. Click the `Add SSH Key` button
+  
+
+  ![image](https://github.com/AI-Maker-Space/LLMOps-Dev-101/assets/37101144/8f7c4496-0e88-4058-9baf-73495322db8b)
+
+
+</details>
+
+
+
+
+
+
+
