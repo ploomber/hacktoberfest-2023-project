@@ -15,8 +15,10 @@ Source: https://desktop.github.com/
 
 Click the `Download for {OS}` button.
 
+</details>
+
 <details>
-  <summary>Github SSH Setup (if you are using Git from the terminal)</summary>
+  <summary>Github SSH Setup (if you are using Git from the terminal instead of GitHub Desktop)</summary>
   Secure Shell Protocol (SSH) provides a secure communication channel of an unsecured network.  Let's set it up!
   
   <p></p>
