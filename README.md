@@ -35,6 +35,7 @@ Options:
 
 1. FastAPI application
 2. Chainlit application
+3. Voila dashboard
 
 ## Team members
 

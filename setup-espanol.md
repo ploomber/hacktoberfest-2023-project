@@ -82,3 +82,87 @@ Haz clic en Instalar <img src="https://github.com/AI-Maker-Space/LLMOps-Dev-101/
 
 </details>
 <p> </p>
+
+## Creando una copia local del repositorio
+
+Cada equipo decidirá quién será el propietario del repositorio. El propietario creará una copia del repositorio y compartirá el acceso con los miembros del equipo.
+
+1. Haz clic en el botón Usar esta plantilla en la esquina superior derecha del repositorio.
+2. Selecciona "Crear un nuevo repositorio" y completa los campos.
+
+![](./images/template-copy.png)
+
+3. El propietario del repositorio compartirá el repositorio con los miembros del equipo recopilando sus ID de GitHub y agregándolos como colaboradores.
+
+![](./images/collaborators.png)
+
+4. Cada miembro del equipo clonará el repositorio en su máquina local. Puedes usar GitHub Desktop o la línea de comandos para clonar el repositorio.
+Para usar GitHub Desktop, haz clic en el botón Code y selecciona Abrir con GitHub Desktop.
+
+![](./images/clonerepo.png)
+
+Si prefieres usar la línea de comandos, copia el enlace SSH y ejecuta el siguiente comando en tu terminal.
+
+## Configurando un entorno virtual
+
+Una vez que hayas instalado todo el software necesario y hayas clonado el repositorio, deberás configurar un entorno virtual. Un entorno virtual es una herramienta que ayuda a mantener separadas las dependencias requeridas por diferentes proyectos al crear entornos virtuales de Python aislados. Esta es una de las herramientas más importantes que la mayoría de los desarrolladores de Python utilizan.
+
+Desde GitHub Desktop, haz clic derecho en el nombre del repositorio y luego haz clic en el botón Abrir en Visual Studio Code. Esto abrirá el repositorio en VSCode.
+
+![](/images/open-vscode.png)
+
+
+Una vez que VSCode esté abierto, abre una nueva terminal haciendo clic en el menú Terminal, luego selecciona Nueva Terminal.
+
+Asegúrate de que tu terminal sea de tipo "bash" o "línea de comandos" para ejecutar comandos de conda.
+
+## Configurando un entorno virtual usando conda
+
+1. Crea un nuevo entorno conda utilizando el siguiente comando.
+
+```bash
+conda create -n hacktoberfest-env python=3.10
+```
+
+2. Activa el entorno utilizando el siguiente comando.
+
+```bash
+conda activate hacktoberfest-env
+```
+
+3. Instala poetry.
+
+```bash
+pip install poetry
+```
+
+4. Instala los paquetes requeridos utilizando el siguiente comando.
+
+```bash
+poetry install
+```
+
+**Nota** Esto solo functionara si estas dentro del directorio del repositorio.
+
+## Conectemos VSCode al entorno virtual que acabamos de crear.
+
+Esto asume que aún estás trabajando desde la carpeta correspondiente al repositorio que acabas de clonar.
+
+1. Abre la Paleta de Comandos
+<strong>(Mac: </strong></ins> <kbd>Shift</kbd><kbd>⌘</kbd>+<kbd>P</kbd>
+,<strong> Windows: </strong></ins> <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>)
+
+2. Escribe "Intérprete de Python".
+
+3. Haz clic en Python: Seleccionar Intérprete
+
+4. Selecciona el entorno Conda que instalaste anteriormente (`hacktoberfest-env`)
+
+<p align = "center" draggable=”false”>
+<img src="https://github.com/AI-Maker-Space/LLMOps-Dev-101/assets/37101144/d95ff119-2c97-4bf8-9133-1bf167f61f6e"> 
+</p>
+
+¡Ahora estás listo para comenzar a programar!
+
+
+
