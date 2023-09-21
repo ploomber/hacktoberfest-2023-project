@@ -233,9 +233,6 @@ After logging in, press `y` to add the token to credentials for git.
 
 </details>
 
-
-## <img src="https://octodex.github.com/images/original.png" width=40px/> Let's Make Sure That GitHub is Ready to Roll!
-
 ## 🐳 Setting up Docker Desktop and Compose
 
 <details>
