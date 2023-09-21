@@ -38,10 +38,12 @@ Fuente: https://desktop.github.com/
 Haz clic en el botón Descargar para {OS}.
 
 </details>
+
 <details>
-  <summary>Configuración de Github SSH (si estás usando Git desde la terminal en lugar de GitHub Desktop)</summary>
-  El Protocolo de Shell Seguro (SSH) proporciona un canal de comunicación seguro en una red no segura. ¡Configurémoslo!
-  <p></p>
+
+<summary>Configuración de Github SSH (si estás usando Git desde la terminal en lugar de GitHub Desktop)</summary>
+El Protocolo de Shell Seguro (SSH) proporciona un canal de comunicación seguro en una red no segura. ¡Configurémoslo!
+<p></p>
 
 1. Genera un par de claves SSH privada/pública.
 
@@ -76,6 +78,7 @@ ssh-keygen -o -t rsa -C "tu dirección de correo electrónico para github"
 ![image](https://github.com/AI-Maker-Space/LLMOps-Dev-101/assets/37101144/8f7c4496-0e88-4058-9baf-73495322db8b)
 
 </details>
+
 <details>
   <summary>Instalar miniconda</summary>
 Fuente: https://docs.conda.io/projects/miniconda/en/latest/#id2
@@ -85,13 +88,14 @@ Elige la distribución que tenga sentido para tu sistema operativo.
 
 
 </details>
+
 <details>
-  <summary>Instalar y configurar VSCode</summary>
+<summary>Instalar y configurar VSCode</summary>
 Fuente: https://code.visualstudio.com/docs/setup/setup-overview
 
 Elige la distribución que tenga sentido para tu sistema operativo.
 
-  <summary>Instalar las extensiones de Python y Jupyter Notebook</summary>
+<summary>Instalar las extensiones de Python y Jupyter Notebook</summary>
 Haz clic en la pestaña Extensiones <img src="https://github.com/AI-Maker-Space/LLMOps-Dev-101/assets/37101144/f17d8f45-f174-4b9b-be92-8f1e85d8a77b" width=30px/>.
 
 Escribe "Python" en la barra de búsqueda.
