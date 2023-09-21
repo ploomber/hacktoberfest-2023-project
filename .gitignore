@@ -159,3 +159,19 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 .DS_Store
+
+*.csv
+*.xlsx
+*.xls
+*.json
+*.db
+*.duck.db 
+*.duckdb
+*.metadata
+*.json
+*.sqlite
+# Ignore everything in the products directory
+src/products/*
+
+# But do not ignore .gitkeep files
+!src/products/.gitkeep
