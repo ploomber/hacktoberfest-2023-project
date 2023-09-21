@@ -1,6 +1,6 @@
 # Instrucciones de configuración
 
-## hammer_and_wrench: Herramientas que utilizaremos
+## :hammer_and_wrench: Herramientas que utilizaremos
 
 Trabajaremos con:
 
@@ -21,10 +21,11 @@ Fuente: https://desktop.github.com/
 Haz clic en el botón Descargar para {OS}.
 
 </details>
+
 <details>
-  <summary>Configuración de Github SSH (si estás usando Git desde la terminal en lugar de GitHub Desktop)</summary>
-  El Protocolo de Shell Seguro (SSH) proporciona un canal de comunicación seguro en una red no segura. ¡Configurémoslo!
-  <p></p>
+<summary>Configuración de Github SSH (si estás usando Git desde la terminal en lugar de GitHub Desktop)</summary>
+El Protocolo de Shell Seguro (SSH) proporciona un canal de comunicación seguro en una red no segura. ¡Configurémoslo!
+<p></p>
 1. Genera un par de claves SSH privada/pública.
 
 ```bash
@@ -40,7 +41,6 @@ Haz clic en el botón Descargar para {OS}.
 </details>
 
 <details>
-
 <summary>Configuración de Github SSH (si estás usando Git desde la terminal en lugar de GitHub Desktop)</summary>
 El Protocolo de Shell Seguro (SSH) proporciona un canal de comunicación seguro en una red no segura. ¡Configurémoslo!
 <p></p>
@@ -80,13 +80,10 @@ ssh-keygen -o -t rsa -C "tu dirección de correo electrónico para github"
 </details>
 
 <details>
-  <summary>Instalar miniconda</summary>
+<summary>Instalar miniconda</summary>
 Fuente: https://docs.conda.io/projects/miniconda/en/latest/#id2
 
 Elige la distribución que tenga sentido para tu sistema operativo.
-
-
-
 </details>
 
 <details>
