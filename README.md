@@ -51,7 +51,7 @@ Opciones:
 
 1. Aplicación FastAPI
 2. Aplicación Chainlit
-3. ablero Voila
+3. Tablero Voila
 
 ## Team members/ Miembros del equipo
 
