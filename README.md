@@ -2,7 +2,7 @@
 
 ## Set up /  Configuración
 
-There should be one GitHub repository per team. / There should be one GitHub repository per team. / Debería haber un repositorio de GitHub por equipo.
+There should be one GitHub repository per team. /  Debería haber un repositorio de GitHub por equipo.
 
 **Ensure all team members have completed all steps in the [set up](setup.md) document.**
 
