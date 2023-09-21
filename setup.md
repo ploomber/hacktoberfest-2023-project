@@ -98,32 +98,6 @@ Pick the distribution that makes sense for your OS.
   3. Click `Install` <img src="https://github.com/AI-Maker-Space/LLMOps-Dev-101/assets/37101144/4c06f2a7-d7c3-4c59-b656-82170518cbeb" width=30px/>  on both the <ins><strong>Python Extension</strong></ins> and on the <ins><strong>Microsoft Jupyter Notebook Extension</strong></ins>
 
 
-  <summary>Set the Python Interpreter</summary>
-
-  1. Open VS Code and click on `New File...`
-
-  2. Open the Command Pallette 
-    <strong>(Mac: </strong></ins> <kbd>Shift</kbd><kbd>⌘</kbd>+<kbd>P</kbd> 
-    ,<strong> Windows: </strong></ins> <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>)
-
-  3. Type "Python" in the search bar.
-
-  4. Click on `New Python File`
-
-  5. Open the Command Pallette again.  Can you remember the shortcut?  If    not, see #2 above again.
-
-  6. Type "Python Interpreter".
-
-  7. Click on `Python: Select Interpreter`
-
-  8. Select the `Conda` environment that you installed earlier. 
-  
-  <p align = "center" draggable=”false”>
-  <img src="https://github.com/AI-Maker-Space/LLMOps-Dev-101/assets/37101144/d95ff119-2c97-4bf8-9133-1bf167f61f6e"> 
-  </p>
-
-  9. Now you're ready to start coding!
-
 </details>
 
 <p> </p>
@@ -187,6 +161,26 @@ pip install poetry
 ```bash
 poetry install
 ```
+
+### Let's connect VSCode to the virtual environment we just created.
+
+This assumes you are still working from the folder corresponding to the repository you just cloned.
+
+1. Open the Command Pallette 
+<strong>(Mac: </strong></ins> <kbd>Shift</kbd><kbd>⌘</kbd>+<kbd>P</kbd> 
+,<strong> Windows: </strong></ins> <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>)
+
+2. Type "Python Interpreter".
+
+3. Click on `Python: Select Interpreter`
+
+4. Select the `Conda` environment that you installed earlier (`hacktoberfest-env`)
+
+<p align = "center" draggable=”false”>
+<img src="https://github.com/AI-Maker-Space/LLMOps-Dev-101/assets/37101144/d95ff119-2c97-4bf8-9133-1bf167f61f6e"> 
+</p>
+
+5. Now you're ready to start coding!
 
 ## 🔑 Setting Up Keys and Tokens
 
