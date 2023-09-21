@@ -29,25 +29,6 @@ El Protocolo de Shell Seguro (SSH) proporciona un canal de comunicación seguro 
 1. Genera un par de claves SSH privada/pública.
 
 ```bash
-:rocket: Software para instalar
-Revisa las instrucciones de configuración del entorno para el entorno local que usarás en este curso.
-
-<details>
-<summary> Instalar GitHub Desktop</summary>
-Fuente: https://desktop.github.com/
-
-Haz clic en el botón Descargar para {OS}.
-
-</details>
-
-<details>
-<summary>Configuración de Github SSH (si estás usando Git desde la terminal en lugar de GitHub Desktop)</summary>
-El Protocolo de Shell Seguro (SSH) proporciona un canal de comunicación seguro en una red no segura. ¡Configurémoslo!
-<p></p>
-
-1. Genera un par de claves SSH privada/pública.
-
-```bash
 ssh-keygen -o -t rsa -C "tu dirección de correo electrónico para github"
 ```
 
