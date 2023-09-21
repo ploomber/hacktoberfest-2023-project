@@ -115,13 +115,17 @@ Pick the distribution that makes sense for your OS.
 
 ![](./images/collaborators.png)
 
-4. Each team member will clone the repository to their local machine. You can use GitHub Desktop or the command line to clone the repository. To use GitHub Desktop, click on the `Code` button and select `Open with GitHub Desktop`. To use the command line, copy the SSH link and run the following command in your terminal.
+4. Each team member will clone the repository to their local machine. You can use GitHub Desktop or the command line to clone the repository. 
+
+To use GitHub Desktop, click on the `Code` button and select `Open with GitHub Desktop`.
+
+![](./images/clonerepo.png)
+
+If you prefer to use the command line, copy the SSH link and run the following command in your terminal.
 
 ```bash
 git clone <SSH link>
 ```
-
-
 
 ## Setting up a virtual environment
 
