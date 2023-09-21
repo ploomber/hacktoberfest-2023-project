@@ -1,7 +1,13 @@
-# hacktoberfest 2023 project template
+# Set up instructions
 
 ## :hammer_and_wrench: Tools We'll Be Using
-We will be using a few tools such as `git`, `conda`, and `pip`.
+We will be working with: 
+
+1. `git`: Through GitHub Desktop and the command line to ensure we can collaborate on code
+2. `conda`, and `poetry`: To manage our Python environments
+3. Virtual Studio Code (VSCode): To write our code
+4. Open source packages: Ploomber, JupySQL, Jupyter notebooks, FastAPI, Haystack and Chainlit
+5. Docker: To containerize our applications
 
 <p></p>
 
