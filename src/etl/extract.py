@@ -30,12 +30,4 @@ def save_to_duckdb(df, table_name, db_path):
 # +
 if __name__ == "__main__":
 
-    # Extract data from URL
-    url = "https://data.cityofnewyork.us/resource/erm2-nwe9.json"
-    df = extract_data(url)
-    
-    # Save to duckdb
-    db_path = "data.duckdb"
-    table_name = "nycitydata"
-    save_to_duckdb(df, table_name, db_path)
-
+    pass 
